@@ -1,3 +1,4 @@
+import React from "react";
 import CustomSigma from "./components/sigma";
 
 function App() {

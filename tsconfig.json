@@ -1,21 +1,41 @@
 {
   "compilerOptions": {
-    "moduleResolution": "bundler",
-    "target": "es5",
+    "baseUrl": ".",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@src/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@common/*": ["src/components/common/*"],
+      "@ui/*": ["src/components/common/ui/*"],
+      "@components/*": ["src/components/*"],
+      "@icons/*": ["src/assets/icons/*"]
+    }
   },
-  "include": ["src"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "function.mjs",
+    "functions/index.mjs",
+    "index.js",
+    "index.mjs"
+  ],
+  "exclude": ["node_modules", "shadcn-scripts.js"]
 }

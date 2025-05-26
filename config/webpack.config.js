@@ -569,6 +569,7 @@ module.exports = function (webpackEnv) {
           test: /\.m?js/,
           resolve: {
             fullySpecified: false,
+            extensions: [".ts", ".tsx", ".js", ".jsx"],
           },
         },
       ].filter(Boolean),
