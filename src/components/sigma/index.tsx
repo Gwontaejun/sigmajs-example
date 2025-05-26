@@ -18,8 +18,8 @@ import "@react-sigma/core/lib/style.css";
 import { sigmaData } from "../data";
 
 const sigmaStyle = {
-  height: "1000px",
-  width: "1900px",
+  height: "700px",
+  width: "1500px",
   border: "1px solid black",
   margin: "auto",
 };
