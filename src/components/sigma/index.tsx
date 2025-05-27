@@ -18,8 +18,8 @@ import "@react-sigma/core/lib/style.css";
 import { sigmaData } from "../data";
 
 const sigmaStyle = {
-  height: "700px",
-  width: "1500px",
+  width: "100%",
+  height: "100%",
   border: "1px solid black",
   margin: "auto",
 };
@@ -192,12 +192,8 @@ const CustomSigma = () => {
   );
 
   return (
-    <div>
-      <SigmaContainer
-        id="sigma-container"
-        style={sigmaStyle}
-        settings={{ allowInvalidContainer: true }}
-      >
+    <div style={{ width: "calc(100% - 500px)", height: 1080 }}>
+      <SigmaContainer id="sigma-container" style={sigmaStyle} settings={{}}>
         <LoadGraph
           focusNode={focusNode ?? selectedNode}
           resetFocus={() => {
