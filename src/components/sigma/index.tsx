@@ -192,7 +192,7 @@ const CustomSigma = () => {
   );
 
   return (
-    <div style={{ width: "calc(100% - 500px)", height: 1080 }}>
+    <div style={{ width: "calc(100% - 10%)", height: 1080 }}>
       <SigmaContainer id="sigma-container" style={sigmaStyle} settings={{}}>
         <LoadGraph
           focusNode={focusNode ?? selectedNode}
@@ -202,7 +202,10 @@ const CustomSigma = () => {
           }}
           move={focusNode ? false : true}
         />
-        <ControlsContainer position="top-right" style={{ width: 500 }}>
+        <ControlsContainer
+          position="top-left"
+          style={{ width: "50%", minWidth: 330 }}
+        >
           <GraphSearch
             type="nodes"
             value={selectedNode ? { type: "nodes", id: selectedNode } : null}
